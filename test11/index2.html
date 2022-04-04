@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let num = [2, 3, 5, 7]
+      // const dd = 9
+      // let newArr = []
+      // let twoSum = function (num, dd) {
+      //   for (let i = 0; i < num.length; i++) {
+      //     for (let j = i + 1; j < num.length; j++) {
+      //       if (dd === num[i] + num[j]) {
+      //         newArr.push(i, j)
+      //       }
+      //     }
+      //   }
+
+      //   return newArr
+      // }
+      // console.log(newArr)
+      //  ddd
+      // var nums = [2, 11, 7, 15],
+      //   target = 9
+      // back = []
+      // function returnIndex(nums, target) {
+      //   var len = nums.length
+
+      //   for (var i = 0; i < len - 1; i++) {
+      //     for (var j = i + 1; j < len; j++) {
+      //       if (nums[i] + nums[j] > 0) {
+      //         back[0] = i
+      //         back[1] = j
+      //       }
+      //     }
+      //   }
+      //   return back
+      // }
+
+      // document.write(returnIndex(nums, target))
+
+      // const nums = [2, 11, 7, 15]
+      // function returnIndex(nums) {
+      //   const len = nums.length
+
+      //   for (let i = 0; i < len; i++) {
+      //     for (let j = i + 1; j < 1; j++) {}
+      //     return nums[i] + nums[j]
+      //   }
+      // }
+      // document.write(returnIndex(nums))
+
+      // let arr = [0, 150, 30, 20, -8, -200]
+      // Math.max(...arr)
+      // document.write(Math.max(...arr))
+
+      // var number = [
+      //   [1,3,3],
+      //   [4,5,6],
+      //   [7,8,9],
+      //   [0]
+      // ]
+
+      //  for(var i = 0 ; i<number.length; i++){
+      //    for( var j = 0; j<number[i].length; j++){
+      //      document.write(number[i][j]);
+      //    }
+      //    document.write("<br/>")
+      //  }
+
+      function contMax(array) {
+        if (array.length == 0) return 0
+        var sum = array[0] //保存每组的和
+        var maxSum = array[0] //连续子数组最大和
+        for (var i = 1; i < array.length; i++) {
+          sum = Math.max(sum + array[i], array[i])
+          maxSum = Math.max(sum, maxSum)
+        }
+        return maxSum
+      }
+
+      document.write(contMax([1, -3])) //20
+
+      // let array = [1, 2, 3, -1, 4]
+
+      // function FindMaxProduct(array) {
+      //   if (array.length == 0) return 0
+
+      //   let currentMaxProduct = array[0]
+      //   let currentMinProduct = array[0]
+      //   let maxProduct = array[0]
+
+      //   for (let i = 1; i < array.length; i++) {
+      //     if (array[i] >= 0) {
+      //       currentMaxProduct = Math.Max(currentMaxProduct * array[i], array[i])
+      //       currentMinProduct = Math.Min(currentMinProduct * array[i], array[i])
+      //     } else {
+      //       temp = currentMaxProduct
+      //       currentMaxProduct = Math.Max(currentMinProduct * array[i], array[i])
+      //       currentMinProduct = Math.Min(temp * array[i], array[i])
+      //     }
+      //     maxProduct = Math.Max(maxProduct, currentMaxProduct)
+      //   }
+      //   return maxProduct
+      // }
+
+      // document.write(FindMaxProduct(array))
+    </script>
+  </body>
+</html>
